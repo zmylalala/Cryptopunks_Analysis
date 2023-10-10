@@ -28,8 +28,8 @@ def trade_trend(df):
     plt.xlabel('date', fontsize=10)
     plt.ylabel('total trade amount (usd)', fontsize=10)
     plt.plot(data.index, data.amount_usd)
-    plt.axvline('2021-01-31', color='b', linestyle='--', label='2021-01-31')
-    plt.axvline('2022-03-01', color='r', linestyle='--', label='2022-03-01')
+    plt.axvline('2020-11-30', color='b', linestyle='--', label='2020-11-30')
+    plt.axvline('2022-06-30', color='r', linestyle='--', label='2022-06-30')
     plt.legend()
     plt.grid(color="k", linestyle=":", axis='y')
     x_major_locator = MultipleLocator(120)
@@ -81,7 +81,7 @@ def freq_trans(df1, df2):
 
 def owners_analysis(df):
     data = df['current_owner'].value_counts()
-    data = data.head(100)
+    data = data.head(10)
     data.to_csv('./outputData/top_owner_counts.csv')
 
 
@@ -91,12 +91,34 @@ def punk_analysis(df):
     # fig = plt.bar(df.drop_duplicates("punk_id")['type'].value_counts().rename_axis('type').reset_index(name='counts'),
     #             x="type", y="counts", color="type", title="Cryptopunk Type Counts")
     # fig.show()
-    plt.figure(figsize=(8, 4))
+    # plt.figure(figsize=(8, 4))
     # width = 0.5
-    print(df.type)
-    print(data)
+    # print(df.type)
+    # print(data)
     # plt.bar(df['type'], data, width, label='1')
     # plt.show()
+
+
+def eth_usd(df):
+    df = df.sort_values(by='Date')
+    plt.figure(figsize=(8, 4))
+    plt.xlabel('date', fontsize=10)
+    plt.ylabel('eth price (usd)', fontsize=10)
+    plt.plot(df.Date, df.Open)
+    plt.axvline('2020-11-30', color='b', linestyle='--', label='2020-11-30')
+    plt.axvline('2022-06-30', color='r', linestyle='--', label='2022-06-30')
+    plt.legend()
+    plt.grid(color="k", linestyle=":", axis='y')
+
+    x_major_locator = MultipleLocator(120)
+    ax = plt.gca()
+    ax.xaxis.set_major_locator(x_major_locator)
+
+    plt.tick_params(axis='both', which='both', labelsize=10)
+    plt.gcf().autofmt_xdate()
+    # plt.show()
+
+    plt.savefig('./pics/eth_usd.png', dpi=600)
 
 
 def main():
@@ -109,8 +131,10 @@ def main():
     freq_trans(cp_market_df.copy(), punks_data_df.copy())
     current_owners_per_token_df = pd.read_csv('./data/current_owners_per_token.csv')
     owners_analysis(current_owners_per_token_df.copy())
-    # txn_history_df = pd.read_json("./data/txn_history.jsonl", lines=True)
-    # punk_analysis(txn_history_df.copy())
+    txn_history_df = pd.read_json("./data/txn_history.jsonl", lines=True)
+    punk_analysis(txn_history_df.copy())
+    eth_usd_df = pd.read_csv('./data/ETH-USD.csv')
+    eth_usd(eth_usd_df.copy())
 
 
 if __name__ == '__main__':
