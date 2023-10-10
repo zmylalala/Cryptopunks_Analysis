@@ -68,23 +68,23 @@ CryptoPunk trading was active from November 30, 2020, to March 30, 2022.
 <figure>
     <img src="pics/eth_usd.png">
 </figure>
+By observing the price chart and transaction number chart of eth, we can find that they have similar cyclicality. 
 <figure>
     <img src="pics/buyers.png">
 </figure>
-By observing the price chart and transaction number chart of eth, we can find that they have similar cyclicality.  
 An analysis of the current CryptoPunk owner data found that a total of 2,926 accounts own CryptoPunk, 
 with an average of 3.42 CryptoPunks per person, of which 11 accounts have more than 100 CryptoPunks, 
 and 106 accounts have more than 10 CryptoPunks. 96% of people own less than 10 CryptoPunks. 
-4% of people own more than 55% of CryptoPunks.  
+4% of people own more than 55% of CryptoPunks.</br>
 Through investigation, it was found that on August 23, 2021, Visa, the credit card company, 
 announced that it had purchased CryptoPunk No. 7610 at a price of 49.5 Ethereum (approximately US$150,000), 
 just after Visa announced the purchase of this NFT. Within an hour, 90 CryptoPunks were traded, with the transaction 
 volume on that day exceeding US$100 million. A total of 2,516 CryptoPunks were traded throughout August, 
-with an average selling price of US$267,000. Trading volume peaked at $140 million on August 28.  
+with an average selling price of US$267,000. Trading volume peaked at $140 million on August 28.  </br>
 Yuga Labs acquired CryptoPunks in March 2022. Yuga Labs said that with the acquisition, they aimed to cultivate a 
 "community of builders" to create derivative works around the two projects. To achieve this, Yuga Labs began 
 transferring IP, commercial, and exclusive licensing rights to individual NFT holders, just as they did with their 
-BAYC series. During the same period, the price of Ethereum entered a stage of steep decline.  
+BAYC series. During the same period, the price of Ethereum entered a stage of steep decline. </br> 
 The output data counts the number of transactions between buyers and CryptoPunks as well as the higher transaction 
 amounts. Interested readers can download the relevant data.
 
