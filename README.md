@@ -23,9 +23,9 @@ Ethereum is a blockchain with computers embedded within it. It is the foundation
 organizations in a decentralized way.  
 In Ethereum, there is a canonical computer (called the Ethereum Virtual Machine, or EVM) whose state is 
 unanimously agreed upon by everyone in the Ethereum network. Everyone participating in the Ethereum network 
-(each Ethereum node) keeps a copy of the state of that computer. Additionally, any participant can broadcast requests 
+keeps a copy of the state of that computer. Additionally, any participant can broadcast requests 
 to this computer to perform arbitrary computations. Whenever such a request is broadcast, other participants on the 
-network inspect, verify, and perform ("perform") the computation. This execution causes a state change in the Ethereum 
+network inspect, verify, and perform the computation. This execution causes a state change in the Ethereum 
 Virtual Machine that is propagated throughout the network.    
 This article aims to analyze the development history of CryptoPunks and give some insights.
 
@@ -44,8 +44,8 @@ cost that the sender of this transaction needs to bear.
 In addition to the above data, transactions involving smart contracts will also have three additional pieces of content:  
 (1) The internal process of Ethereum executing transactions (internal transactions);  
 (2) The result of the token transfer (token transfer);  
-(3) Input parameters (input data) for contract execution  
-In a contract source code, not only the contract method (function) will be defined, but also the event and 
+(3) Input parameters for contract execution  
+In a contract source code, not only the contract method will be defined, but also the event and 
 the submission event. The submission event will be recorded in the log, and finally the log will be recorded 
 in the receipt function of a transaction that calls the contract.  
 CryptoPunk belongs to the third type of transaction. Using DUNE can save the work of decoding part of the hash bytecode.  
