@@ -29,7 +29,7 @@ def trade_trend(df):
     plt.ylabel('total trade amount (usd)', fontsize=10)
     plt.plot(data.index, data.amount_usd)
     plt.axvline('2020-11-30', color='b', linestyle='--', label='2020-11-30')
-    plt.axvline('2022-06-30', color='r', linestyle='--', label='2022-06-30')
+    plt.axvline('2022-03-30', color='r', linestyle='--', label='2022-03-30')
     plt.legend()
     plt.grid(color="k", linestyle=":", axis='y')
     x_major_locator = MultipleLocator(120)
@@ -81,13 +81,13 @@ def freq_trans(df1, df2):
 
 def owners_analysis(df):
     data = df['current_owner'].value_counts()
-    data = data.head(10)
+    data = data.head(100)
     data.to_csv('./outputData/top_owner_counts.csv')
 
 
 def punk_analysis(df):
     # df = df.explode("type")
-    data = df.groupby('type').nunique()
+    # data = df.groupby('type').nunique()
     # fig = plt.bar(df.drop_duplicates("punk_id")['type'].value_counts().rename_axis('type').reset_index(name='counts'),
     #             x="type", y="counts", color="type", title="Cryptopunk Type Counts")
     # fig.show()
@@ -97,6 +97,7 @@ def punk_analysis(df):
     # print(data)
     # plt.bar(df['type'], data, width, label='1')
     # plt.show()
+    pass
 
 
 def eth_usd(df):
@@ -106,7 +107,7 @@ def eth_usd(df):
     plt.ylabel('eth price (usd)', fontsize=10)
     plt.plot(df.Date, df.Open)
     plt.axvline('2020-11-30', color='b', linestyle='--', label='2020-11-30')
-    plt.axvline('2022-06-30', color='r', linestyle='--', label='2022-06-30')
+    plt.axvline('2022-03-30', color='r', linestyle='--', label='2022-03-30')
     plt.legend()
     plt.grid(color="k", linestyle=":", axis='y')
 
