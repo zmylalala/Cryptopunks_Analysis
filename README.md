@@ -1,4 +1,4 @@
-# CryptoPunk Analysis
+# CryptoPunks Analysis
 ## INTRODUCTION
 Launched in June 2017 by Larva Labs and acquired by Yuga Labs in 2022, CryptoPunks is one of the first 
 NFT collections on the Ethereum blockchain. It consists of 10,000 unique 24×24 pixel art images depicting primarily 
