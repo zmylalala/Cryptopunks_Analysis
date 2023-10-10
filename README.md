@@ -1,6 +1,6 @@
 # CryptoPunk Analysis
 ## INTRODUCTION
-Launched in June 2017 by product studio Larva Labs and acquired by Yuga Labs in 2022, CryptoPunks is one of the first 
+Launched in June 2017 by Larva Labs and acquired by Yuga Labs in 2022, CryptoPunks is one of the first 
 NFT collections on the Ethereum blockchain. It consists of 10,000 unique 24×24 pixel art images depicting primarily 
 humans (male and female). There are several other unique types that are considered more valuable due to their 
 rarity. These include zombies (88), apes (24) and aliens (9).  
@@ -16,12 +16,12 @@ transaction data needs to be added to a block for it to be successful.
 "Chain" refers to each block's cryptographic reference to its parent block. In other words, blocks are linked together. 
 The data within the block cannot be changed without changing all subsequent blocks, but changing subsequent blocks 
 requires the consensus of the entire network.  
-Every computer in the network must agree on each new block and chain. These computers are called "nodes". Nodes ensure 
+Every computer in the network must agree on each new blockchain. These computers are called "nodes". Nodes ensure 
 that everyone interacting with the blockchain has the same data. To complete this distributed protocol, the blockchain 
 requires a consensus mechanism.  
 Ethereum is a blockchain with computers embedded within it. It is the foundation for building applications and 
-organizations in a decentralized, permissionless, censorship-resistant way.  
-In the Ethereum universe, there is a canonical computer (called the Ethereum Virtual Machine, or EVM) whose state is 
+organizations in a decentralized way.  
+In Ethereum, there is a canonical computer (called the Ethereum Virtual Machine, or EVM) whose state is 
 unanimously agreed upon by everyone in the Ethereum network. Everyone participating in the Ethereum network 
 (each Ethereum node) keeps a copy of the state of that computer. Additionally, any participant can broadcast requests 
 to this computer to perform arbitrary computations. Whenever such a request is broadcast, other participants on the 
@@ -37,7 +37,7 @@ Execution Contract: A transaction that interacts with a deployed smart contract.
 smart contract address  
 Regular transactions refer to transfers that only involve Ether, the native token of Ethereum, and do not involve calls 
 to contracts or transactions with other tokens in Ethereum. The data in regular transactions can be roughly divided into 
-four blocks: transaction hash, time, etc. belong to the transaction index (index), which provides information to locate 
+four blocks: transaction hash, time, etc. belong to the transaction index, which provides information to locate 
 the transaction. The transaction amount specifically refers to the amount of Ether transferred. The sender and receiver 
 of the transaction are each other's counterparties in this transaction. The consumption of gas fees is the transaction 
 cost that the sender of this transaction needs to bear.   
@@ -68,7 +68,7 @@ CryptoPunk trading was active from November 30, 2020, to March 30, 2022.
 <figure>
     <img src="pics/eth_usd.png">
 </figure>
-By observing the price chart and transaction number chart of eth, we can find that they have similar cyclicality. 
+By observing the price chart and transaction number chart of ETH, we can find that they have similar cyclicality. 
 <figure>
     <img src="pics/buyers.png">
 </figure>
